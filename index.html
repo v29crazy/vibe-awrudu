@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSOS - සිංහල අලුත් අවුරුද්ද 2024 - Nekath Times</title>
+    <title>සිංහල අලුත් අවුරුද්ද 2025 - නැකත්</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
@@ -86,7 +86,7 @@
         .swiper {
             width: 100%;
             padding: 50px 0;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .swiper-slide {
@@ -94,6 +94,7 @@
             transform: scale(0.8);
             transition: all 0.5s ease;
             filter: blur(2px);
+            /* width: auto; */
         }
 
         .swiper-slide-active {
@@ -206,117 +207,220 @@
             opacity: 1;
             transform: scale(1.2);
         }
+
+        .game-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f0e68c;
+            margin-top: 40px;
+        }
+
+        .pot-container {
+            display: flex;
+            justify-content: center; /* Center the pots */
+            flex-wrap: nowrap; /* Keep all pots in a single row */
+            gap: 10px; /* Add space between pots */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            width: 100%; /* Responsive width */
+            max-width: 100%; /* Ensure it doesn't exceed the viewport */
+            margin: 0 auto; /* Center the container */
+            padding: 10px; /* Add padding for better touch interaction */
+        }
+        .pot {
+            flex: 1 0 auto; /* Allow pots to shrink if necessary */
+            width: 150px; /* Consistent pot width */
+            max-width: 150px; /* Ensure pots do not exceed this width */
+            width: 150px;
+            transition: transform 0.3s ease;
+            cursor: url('stick.png'), auto;
+        }
+        .pot.broken {
+            transform: scale(0.8);
+            opacity: 0.5;
+        }
+        .splash {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0, 150, 255, 0.5);
+            border-radius: 50%;
+            animation: splashEffect 1s ease-out;
+            pointer-events: none;
+            transform-origin: center;
+        }
+        @keyframes splashEffect {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            50% { transform: scale(2.5) rotate(180deg); opacity: 0.7; }
+            100% { transform: scale(4) rotate(360deg); opacity: 0; }
+        }
+
+        #reset-button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: var(--awurudu-accent);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            display: none; /* Initially hidden */
+            margin-top: 20px; /* Add some space above the button */
+            position: relative; /* Changed from absolute to relative */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #reset-button:hover {
+            background-color: var(--awurudu-light);
+        }
+
+        .greeting {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: var(--awurudu-accent);
+            opacity: 0;
+            animation: floatText 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatText {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+            50% { transform: translate(-50%, -60%) scale(1.2); opacity: 1; }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>සිංහල අලුත් අවුරුදු නැකත් වේලාවන් - 2025</h1>
-        <p style="font-size: 1.2em; color: var(--osos-primary);">පවුලේ සියලු දෙනාට සුභ අලුත් අවුරුද්දක් වේවා!</p>
+        <h1>සිංහල අලුත් අවුරුද්දක් වේවා! ආයුබෝවන්!</h1>
+        <p style="font-size: 1.2em; color: var(--osos-primary);">සියලු දෙනාට සුභ අලුත් අවුරුද්දක් වේවා! ආයුබෝවන්!</p>
         <p style="font-size: 1.1em; color: var(--awurudu-accent); margin-top: 15px;">
-            සිංහල හා දෙමළ අලුත් අවුරුද්ද යනු අපගේ සංස්කෘතික උරුමයන් සැමරීමේ අනගි අවස්ථාවකි.
+            සිංහල හා දෙමළ අලුත් අවුරුද්ද සමඟින් ඔබ සැමට සෞභාග්‍යය, සතුට සහ සාමය උදාවේවා!
         </p>
         <p style="font-size: 1.1em; color: var(--awurudu-accent); margin-top: 10px;">
-            சிங்கள தமிழ் புத்தாண்டு என்பது எமது கலாச்சார பாரம்பரியத்தை கொண்டாடும் அரிய தருணமாகும்.
+            சிங்கள தமிழ் புத்தாண்டு வாழ்த்துக்கள்! உங்கள் அனைவருக்கும் மகிழ்ச்சியும் செழிப்பும் நிறைந்த ஆண்டாக அமையட்டும்!
         </p>
         <p style="font-size: 1.1em; color: var(--awurudu-accent); margin-top: 10px;">
-            The Sinhala and Tamil New Year is a precious moment to celebrate our cultural heritage.
+            Happy Sinhala and Tamil New Year! May this year bring prosperity, happiness and peace to all!
         </p>
         <p style="font-size: 1.1em; color: var(--osos-primary); margin-top: 10px; margin-bottom: 15px;">
-            Celebrating our diversity and collaboration - Lets welcome the New Year together!
-            எமது பன்முகத்தன்மையையும் ஒற்றுமையையும் கொண்டாடுவோம்!
-            අපගේ විවිධත්වය සහ සහයෝගීතාවය සමරමින්, එකමුතුව අලුත් අවුරුදු සැමරුම් සිදු කරමු!
+            Together in celebration, united in spirit - Wishing you a blessed New Year!
+            ஒன்றிணைந்து கொண்டாடுவோம் - இனிய புத்தாண்டு நல்வாழ்த்துக்கள்!
+            එක්ව සමරමු - ඔබ සැමට සුභ නව වසරක් වේවා!
         </p>
     </div>
 
-    <div class="swiper"><div class="swiper-wrapper">
-        <!-- Ritual Bath for the Old Year -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="bath.png" alt="පැරණි අවුරුද්දේ නාන කටයුතු">
-                <h3>පැරණි අවුරුද්දේ නාන කටයුතු</h3>
-                <div class="time">අප්‍රේල් 13 - ඉරිදා</div>
-                <div class="description">
-                    දිවුල් කොළ භාවිතා කරමින් ශාරීරික හා ආධ්‍යාත්මික පවිත්‍රතාවය සඳහා හෙබැඳි නාන කටයුතු. අවසන් උත්සවය පැරණි අවුරුද්ද නිම කරමින් නව අවුරුද්දට සාමය ආරාධනා කිරීමේ ආගමික වතාවත් සමඟ සිදු වේ.
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Ritual Bath for the Old Year -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="bath.png" alt="පැරණි අවුරුද්දේ ස්නානය">
+                    <h3>පැරණි අවුරුද්දේ ස්නානය</h3>
+                    <div class="time">අප්‍රේල් 13 - ඉරිදා</div>
+                    <div class="description">
+                        දිවුල් කොළ භාවිත කරමින් ශාරීරික හා ආධ්‍යාත්මික පවිත්‍රතාව සඳහා හෙබැඳි ස්නානය. අවසන් උත්සවය පැරණි අවුරුද්ද නිම කරමින් නව අවුරුද්දට සාමය ආරාධනා කිරීමේ ආගමික වතාවත් සමඟ සිදු වේ.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Dawn of the New Year -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="old.png" alt="අලුත් අවුරුදු උදාව">
+                    <h3>අලුත් අවුරුදු උදාව</h3>
+                    <div class="time">අප්‍රේල් 14 - පෙ.ව. 3:21</div>
+                    <div class="description">
+                        පැරණි අවුරුද්ද නිමවීමත් සමඟ, සුබ මොහොත සලකුණු කරමින් තෙල් පහන් දැල්වීම, නව ආරම්භයක් ආශීර්වාදය හා සෞභාග්‍යය ආරාධනා කිරීම.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Punya Kalaya (Neutral Period) -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="nonagathua.jpeg" alt="පුණ්‍ය කාලය">
+                    <h3>පුණ්‍ය කාලය</h3>
+                    <div class="time">අප්‍රේල් 13 - ප.ව. 8:57 සිට අප්‍රේල් 14 - පෙ.ව. 9:45</div>
+                    <div class="description">
+                        නිශ්චලතාවය හා මනෝසංයමය සඳහා වූ කාලය. පවුල් එක්ව වැඩ කිරීමට, කෑම පිසීමට සහ කාලය ගත කිරීමට සුබදායක කාලය.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Preparation of the First Meal -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="awrudu.png" alt="පළමු ආහාර පිළියෙල කිරීම">
+                    <h3>පළමු ආහාර පිළියෙල කිරීම</h3>
+                    <div class="time">අප්‍රේල් 14 - පෙ.ව. 4:04</div>
+                    <div class="description">
+                        කිරි බත්, මුං කැවිලි හා කිරි උතුරවා සමෘද්ධිය සහ එක්සත්කම සලකුණු කරයි. තඹ පැහැති ඇඳුම්, දකුණට මුහුණලා.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- First Work & Transactions -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="work.png" alt="පළමු වැඩ සහ ගනුදෙනු">
+                    <h3>පළමු වැඩ සහ ගනුදෙනු</h3>
+                    <div class="time">අප්‍රේල් 14 - පෙ.ව. 6:44</div>
+                    <div class="description">
+                        වසරේ පළමු ආහාරය අනුභව කරමින්, වැඩ ආරම්භ කිරීම හා ගනුදෙනු කිරීම — සාර්ථකත්වය සහ ස්ථාවරත්වය සලකුණු කරයි. සුදු පැහැති ඇඳුම්, දකුණට මුහුණලා.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Anointing of Oil -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="oil.png" alt="හිසතෙල් ගෑම">
+                    <h3>හිසතෙල් ගෑම</h3>
+                    <div class="time">අප්‍රේල් 16 - පෙ.ව. 9:04</div>
+                    <div class="description">
+                        කොහඹ සහ කොලොන් කොළ සමඟ හිසට තෙල් ගෑම. මෙම වතාවත් සෞඛ්‍යය සහ ආරක්ෂාව ප්‍රවර්ධනය කරන බව විශ්වාස කෙරේ. කොළ පැහැති ඇඳුම්, උතුරට මුහුණලා.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Stepping Out for Prosperity -->
+            <div class="swiper-slide">
+                <div class="nekath-card">
+                    <img src="office.png" alt="සෞභාග්‍යය සඳහා පිටවීම">
+                    <h3>සෞභාග්‍යය සඳහා පිටවීම</h3>
+                    <div class="time">අප්‍රේල් 17 - පෙ.ව. 9:03</div>
+                    <div class="description">
+                        කිරි බත් සහ මුං කැවිලි සමඟ ආහාරය අනුභව කිරීමෙන් පසු, වසරේ පළමු ගමන ආරම්භ කිරීම — සෞභාග්‍යය සහ ධනාත්මකභාවය ආරාධනා කිරීම. රන් පැහැති ඇඳුම්, උතුරට මුහුණලා.
+                    </div>
                 </div>
             </div>
         </div>
-    
-        <!-- Dawn of the New Year -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="old.png" alt="අලුත් අවුරුදු උදාව">
-                <h3>අලුත් අවුරුදු උදාව</h3>
-                <div class="time">අප්‍රේල් 14 - පෙ.ව. 3:21</div>
-                <div class="description">
-                    පැරණි අවුරුද්ද නිමවීමත් සමඟ, සුබ මොහොත සලකුණු කරමින් තෙල් පහන් දැල්වීම, නව ආරම්භයක් ආලෝකමත් කරමින් ආශිර්වාදය හා සෞභාග්‍යය ආරාධනා කිරීම.
-                </div>
-            </div>
-        </div>
-    
-        <!-- Punya Kalaya (Neutral Period) -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="nonagathua.jpeg" alt="පුණ්‍ය කාලය">
-                <h3>පුණ්‍ය කාලය</h3>
-                <div class="time">අප්‍රේල් 13 - ප.ව. 8:57 සිට අප්‍රේල් 14 - පෙ.ව. 9:45</div>
-                <div class="description">
-                    නිශ්චලතාවය හා මනෝසංයමය සඳහා වූ කාලය. පවුල් එකට එකතු වී වැඩ කිරීමට, කෑම පිසීමට සහ කාලය ගත කිරීමට සුබදායක කාලය.
-                </div>
-            </div>
-        </div>
-    
-        <!-- Preparation of the First Meal -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="awrudu.png" alt="පළමු ආහාර පිළියෙල කිරීම">
-                <h3>පළමු ආහාර පිළියෙල කිරීම</h3>
-                <div class="time">අප්‍රේල් 14 - පෙ.ව. 4:04</div>
-                <div class="description">
-                    කිරි බත්, මී කැවිලි, හා කිරි උතුරා abundance සහ එකමුතුව සලකුණු කරයි. තඹ පැහැති ඇඳුම්, දකුණට මුහුණලා.
-                </div>
-            </div>
-        </div>
-    
-        <!-- First Work & Transactions -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="work.png" alt="පළමු වැඩ සහ ගනුදෙනු">
-                <h3>පළමු වැඩ සහ ගනුදෙනු</h3>
-                <div class="time">අප්‍රේල් 14 - පෙ.ව. 6:44</div>
-                <div class="description">
-                    වසරේ පළමු ආහාරය අනුභව කරමින්, වැඩ ආරම්භ කිරීම, ගනුදෙනු කිරීම — සාර්ථකත්වය සහ ස්ථාවරතාවය සලකුණු කරයි. සුදු සහ මැණික් පැහැති ඇඳුම්, දකුණට මුහුණලා.
-                </div>
-            </div>
-        </div>
-    
-        <!-- Anointing of Oil -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src=".\oil.png" alt="හිසතෙල් ගෑම">
-                <h3>හිසතෙල් ගෑම</h3>
-                <div class="time">අප්‍රේල් 16 - පෙ.ව. 9:04</div>
-                <div class="description">
-                    කොහොඹ සහ කොලොන් කොළ සමඟ හිසට තෙල් ගෑම. මෙම වතාවත් සෞඛ්‍යය සහ ආරක්ෂාව ප්‍රවර්ධනය කරන බව විශ්වාස කෙරේ. කොළ පැහැති ඇඳුම්, උතුරට මුහුණලා.
-                </div>
-            </div>
-        </div>
-    
-        <!-- Stepping Out for Prosperity -->
-        <div class="swiper-slide">
-            <div class="nekath-card">
-                <img src="office.png" alt="සෞභාග්‍යය සඳහා පිටවීම">
-                <h3>සෞභාග්‍යය සඳහා පිටවීම</h3>
-                <div class="time">අප්‍රේල් 17 - පෙ.ව. 9:03</div>
-                <div class="description">
-                    කිරි බත් සහ මී කැවිලි සමඟ ආහාරය අනුභව කිරීමෙන් පසු, වසරේ පළමු ගමන ආරම්භ කිරීම — සෞභාග්‍යය සහ ධනාත්මකත්වය ආරාධනා කිරීම. රන් පැහැති ඇඳුම්, උතුරට මුහුණලා.
-                </div>
-            </div>
-        </div>
-    </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
+
+    <div class="game-section">
+        <h2>කණා මුට්ටිය - Kana Muttiya Game</h2>
+        <p>වර්ණවත් ජලය තියෙන කළය හොයාගන්න! කළයක් මත ක්ලික් කරලා බලන්න! 🎯</p>
+        <div class="pot-container">
+            <img src="pot.png" alt="Kana Muttiya" class="pot" id="pot1">
+            <img src="pot.png" alt="Kana Muttiya" class="pot" id="pot2">
+            <img src="pot.png" alt="Kana Muttiya" class="pot" id="pot3">
+            <img src="pot.png" alt="Kana Muttiya" class="pot" id="pot4">
+            <img src="pot.png" alt="Kana Muttiya" class="pot" id="pot5">
+        </div>
+        <p id="game-message"></p>
+        <button id="reset-button" style="display: none;">Reset Game</button>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; background-color: #f8f9fa; color: var(--osos-primary);">
+        <p>&copy; 2025 Vishva Weerasinghe. Created using Vibe Coding. All images are generated through a free AI platform.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -383,6 +487,66 @@
         }
 
         setInterval(createKokis, 300);
+
+        const pots = document.querySelectorAll('.pot');
+        const gameMessage = document.getElementById('game-message');
+        let winningPotIndex = Math.floor(Math.random() * pots.length);
+
+        pots.forEach((pot, index) => {
+            pot.addEventListener('click', function() {
+                if (index === winningPotIndex) {
+                    pot.src = 'broken-pot.png';
+                    pot.style.height = '180px';
+                    pot.style.width = '200px';
+                    createSplash(pot);
+                    gameMessage.textContent = 'සුභ පැතුම්! ඔබ වර්ණවත් ජලය සොයා ගත්තා!';
+                    resetButton.style.display = 'block';
+                    const greeting = document.querySelector('.greeting');
+                    greeting.style.opacity = '1';
+                } else {
+                    gameMessage.textContent = 'නැවත උත්සාහ කරන්න!';
+                }
+            });
+        });
+
+        function createSplash(pot) {
+            const splash = document.createElement('div');
+            splash.classList.add('splash');
+            splash.style.left = (pot.offsetLeft + pot.offsetWidth / 2 - 100) + 'px';
+            splash.style.top = (pot.offsetTop + pot.offsetHeight / 2 - 100) + 'px';
+            document.body.appendChild(splash);
+            setTimeout(() => splash.remove(), 1000);
+        }
+
+        const resetButton = document.getElementById('reset-button');
+
+        resetButton.addEventListener('click', function() {
+            // Store the previous winning pot index
+            const previousWinningPotIndex = winningPotIndex;
+
+            // Reset the game
+            pots.forEach(pot => {
+                pot.src = 'pot.png';
+                pot.style.height = 'auto';
+                pot.style.width = '150px';
+            });
+            gameMessage.textContent = '';
+            resetButton.style.display = 'none';
+            const greeting = document.querySelector('.greeting');
+            greeting.style.opacity = '0';
+            
+            // Recalculate winning pot, ensuring it's different from the previous one
+            do {
+                winningPotIndex = Math.floor(Math.random() * pots.length);
+            } while (winningPotIndex === previousWinningPotIndex);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const greeting = document.querySelector('.greeting');
+            setTimeout(() => {
+                greeting.style.opacity = '1';
+            }, 500);
+        });
     </script>
 </body>
 </html>
